@@ -1,0 +1,10 @@
+{
+  "generator-jhipster-blueprint": {
+    "promptValues": {
+      "githubName": "lynx-r",
+      "authorName": "Alex Po",
+      "authorEmail": "aleksey.popryaduhin@yahoo.com",
+      "authorUrl": ""
+    }
+  }
+}
