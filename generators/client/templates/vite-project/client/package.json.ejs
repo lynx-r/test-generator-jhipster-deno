@@ -1,6 +1,8 @@
+<%_ var optionsForwarder = clientPackageManager == 'yarn' ? '' : '-- ' _%>
 {
-  "name": "vite-project",
+  "name": "<%= dasherizedBaseName %>",
   "version": "0.0.0",
+  "description": "Description for <%= baseName  %>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
