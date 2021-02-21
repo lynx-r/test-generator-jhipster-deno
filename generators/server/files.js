@@ -8,6 +8,11 @@ const serverFiles = {
             path: SERVER_NODEJS_DIR,
             templates: ['dummy.txt']
         }
+    ],
+    other: [
+        {
+            templates: ['package.json']
+        }
     ]
 };
 
