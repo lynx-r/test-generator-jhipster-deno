@@ -1,0 +1,9 @@
+import { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: () => import('~/views/PageOne.vue'),
+  },
+]
+export default routes

@@ -373,49 +373,49 @@ function writeFiles() {
     // write Vue.js files
     this.writeFilesToDisk(vueFiles, this, false, `${CLIENT_VUE_TEMPLATES_DIR}`);
 
-    if (!this.enableTranslation) {
-        utils.replaceTranslation(this, [
-            // 'app/app.vue',
-            // 'app/core/home/home.vue',
-            // 'app/core/error/error.vue',
-            // 'app/core/jhi-footer/jhi-footer.vue',
-            // 'app/core/jhi-navbar/jhi-navbar.vue',
-            // 'app/core/ribbon/ribbon.vue',
-            // 'app/shared/jhi-item-count.vue',
-            // 'app/admin/configuration/configuration.vue',
-            // 'app/admin/health/health.vue',
-            // 'app/admin/health/health-modal.vue',
-            // 'app/admin/logs/logs.vue',
-            // 'app/admin/metrics/metrics.vue',
-            // 'app/admin/metrics/metrics-modal.vue'
-        ]);
-        if ((this.databaseType !== 'no' || this.authenticationType === 'uaa') && this.databaseType !== 'cassandra') {
-            // utils.replaceTranslation(this, ['app/admin/audits/audits.vue']);
-        }
-        if (this.authenticationType !== 'oauth2') {
-            // utils.replaceTranslation(this, ['app/account/login-form/login-form.vue']);
-        }
-        if (!this.skipUserManagement) {
-            // utils.replaceTranslation(this, [
-            //     'app/account/change-password/change-password.vue',
-            //     'app/account/activate/activate.vue',
-            //     'app/account/register/register.vue',
-            //     'app/account/reset-password/init/reset-password-init.vue',
-            //     'app/account/reset-password/finish/reset-password-finish.vue',
-            //     'app/account/settings/settings.vue',
-            //     'app/admin/user-management/user-management.vue',
-            //     'app/admin/user-management/user-management-view.vue',
-            //     'app/admin/user-management/user-management-edit.vue'
-            // ]);
-        }
-        if (this.authenticationType === 'session' && !this.skipUserManagement) {
-            // utils.replaceTranslation(this, ['app/account/sessions/sessions.vue']);
-        }
-        if (this.applicationType === 'gateway' && this.serviceDiscoveryType) {
-            // utils.replaceTranslation(this, ['app/admin/gateway/gateway.vue']);
-        }
-        if (this.websocket === 'spring-websocket') {
-            // utils.replaceTranslation(this, ['app/admin/tracker/tracker.vue']);
-        }
-    }
+    // if (!this.enableTranslation) {
+    //     utils.replaceTranslation(this, [
+    //         // 'app/app.vue',
+    //         // 'app/core/home/home.vue',
+    //         // 'app/core/error/error.vue',
+    //         // 'app/core/jhi-footer/jhi-footer.vue',
+    //         // 'app/core/jhi-navbar/jhi-navbar.vue',
+    //         // 'app/core/ribbon/ribbon.vue',
+    //         // 'app/shared/jhi-item-count.vue',
+    //         // 'app/admin/configuration/configuration.vue',
+    //         // 'app/admin/health/health.vue',
+    //         // 'app/admin/health/health-modal.vue',
+    //         // 'app/admin/logs/logs.vue',
+    //         // 'app/admin/metrics/metrics.vue',
+    //         // 'app/admin/metrics/metrics-modal.vue'
+    //     ]);
+    //     if ((this.databaseType !== 'no' || this.authenticationType === 'uaa') && this.databaseType !== 'cassandra') {
+    //         // utils.replaceTranslation(this, ['app/admin/audits/audits.vue']);
+    //     }
+    //     if (this.authenticationType !== 'oauth2') {
+    //         // utils.replaceTranslation(this, ['app/account/login-form/login-form.vue']);
+    //     }
+    //     if (!this.skipUserManagement) {
+    //         // utils.replaceTranslation(this, [
+    //         //     'app/account/change-password/change-password.vue',
+    //         //     'app/account/activate/activate.vue',
+    //         //     'app/account/register/register.vue',
+    //         //     'app/account/reset-password/init/reset-password-init.vue',
+    //         //     'app/account/reset-password/finish/reset-password-finish.vue',
+    //         //     'app/account/settings/settings.vue',
+    //         //     'app/admin/user-management/user-management.vue',
+    //         //     'app/admin/user-management/user-management-view.vue',
+    //         //     'app/admin/user-management/user-management-edit.vue'
+    //         // ]);
+    //     }
+    //     if (this.authenticationType === 'session' && !this.skipUserManagement) {
+    //         // utils.replaceTranslation(this, ['app/account/sessions/sessions.vue']);
+    //     }
+    //     if (this.applicationType === 'gateway' && this.serviceDiscoveryType) {
+    //         // utils.replaceTranslation(this, ['app/admin/gateway/gateway.vue']);
+    //     }
+    //     if (this.websocket === 'spring-websocket') {
+    //         // utils.replaceTranslation(this, ['app/admin/tracker/tracker.vue']);
+    //     }
+    // }
 }
