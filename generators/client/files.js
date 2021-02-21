@@ -2,9 +2,9 @@ const mkdirp = require('mkdirp');
 const constants = require('generator-jhipster/generators/generator-constants');
 const utils = require('../utils');
 
-const MAIN_SRC_DIR = constants.CLIENT_MAIN_SRC_DIR;
+const MAIN_SRC_DIR = 'client/';
 // const TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
-const VUE_DIR = 'client/';
+const VUE_DIR = `${MAIN_SRC_DIR}src/`;
 const CLIENT_VUE_TEMPLATES_DIR = 'vite-project';
 
 module.exports = {
@@ -12,31 +12,35 @@ module.exports = {
 };
 
 const vueFiles = {
-    // common: [
-    //     {
-    //         templates: [
-    //             'package.json',
-    //             'dummy.txt',
-    //             // 'tsconfig.json',
-    //             // '.huskyrc',
-    //             // '.postcssrc.js',
-    //             // 'tslint.json',
-    //             'config/index.js'
-    //             // 'config/dev.env.js',
-    //             // 'config/prod.env.js',
-    //             // 'webpack/webpack.common.js',
-    //             // 'webpack/webpack.dev.js',
-    //             // 'webpack/webpack.prod.js',
-    //             // 'webpack/vue.utils.js',
-    //             // 'webpack/loader.conf.js',
-    //             // 'webpack/utils.js'
-    //         ]
-    //     }
-    //     // {
-    //     //     condition: generator => generator.protractorTests,
-    //     //     templates: ['tsconfig.e2e.json']
-    //     // }
-    // ]
+    common: [
+        {
+            path: MAIN_SRC_DIR,
+            templates: [
+                'index.html',
+                'package.json',
+                'README.md',
+                'tsconfig.json',
+                'vite.config.ts',
+                { file: 'public/favicon.ico', method: 'copy' }
+                // '.huskyrc',
+                // '.postcssrc.js',
+                // 'tslint.json',
+                // 'config/index.js'
+                // 'config/dev.env.js',
+                // 'config/prod.env.js',
+                // 'webpack/webpack.common.js',
+                // 'webpack/webpack.dev.js',
+                // 'webpack/webpack.prod.js',
+                // 'webpack/vue.utils.js',
+                // 'webpack/loader.conf.js',
+                // 'webpack/utils.js'
+            ]
+        }
+        // {
+        //     condition: generator => generator.protractorTests,
+        //     templates: ['tsconfig.e2e.json']
+        // }
+    ],
     // image: [
     //     {
     //         path: MAIN_SRC_DIR,
@@ -92,7 +96,6 @@ const vueFiles = {
     //     {
     //         path: MAIN_SRC_DIR,
     //         templates: [
-    //             'WEB-INF/web.xml',
     //             { file: 'favicon.ico', method: 'copy' },
     //             'robots.txt',
     //             '404.html',
@@ -104,25 +107,9 @@ const vueFiles = {
     vueApp: [
         {
             path: VUE_DIR,
-            templates: [
-                'app.vue',
-                'app.component.ts',
-                'shims-vue.d.ts',
-                'constants.ts',
-                'main.ts',
-                'shared/config/axios-interceptor.ts',
-                'shared/config/config.ts',
-                'shared/config/config-bootstrap-vue.ts',
-                'shared/config/store/account-store.ts',
-                'shared/config/store/alert-store.ts',
-                'shared/security/authority.ts',
-                'router/index.ts',
-                'router/admin.ts',
-                'router/entities.ts',
-                'router/pages.ts'
-            ]
+            templates: ['App.vue', 'main.ts', 'shims-vue.d.ts', 'components/HelloWorld.vue', { file: 'assets/logo.png', method: 'copy' }]
         }
-    ],
+    ]
     // i18n: [
     //     {
     //         condition: generator => generator.enableTranslation,
