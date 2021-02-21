@@ -4,39 +4,39 @@ const utils = require('../utils');
 
 const MAIN_SRC_DIR = constants.CLIENT_MAIN_SRC_DIR;
 // const TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
-// const VUE_DIR = constants.ANGULAR_DIR;
-const CLIENT_VUE_TEMPLATES_DIR = 'vue';
+const VUE_DIR = 'client/';
+const CLIENT_VUE_TEMPLATES_DIR = 'vite-project';
 
 module.exports = {
     writeFiles
 };
 
 const vueFiles = {
-    common: [
-        {
-            templates: [
-                'package.json',
-                'dummy.txt',
-                // 'tsconfig.json',
-                // '.huskyrc',
-                // '.postcssrc.js',
-                // 'tslint.json',
-                'config/index.js'
-                // 'config/dev.env.js',
-                // 'config/prod.env.js',
-                // 'webpack/webpack.common.js',
-                // 'webpack/webpack.dev.js',
-                // 'webpack/webpack.prod.js',
-                // 'webpack/vue.utils.js',
-                // 'webpack/loader.conf.js',
-                // 'webpack/utils.js'
-            ]
-        }
-        // {
-        //     condition: generator => generator.protractorTests,
-        //     templates: ['tsconfig.e2e.json']
-        // }
-    ]
+    // common: [
+    //     {
+    //         templates: [
+    //             'package.json',
+    //             'dummy.txt',
+    //             // 'tsconfig.json',
+    //             // '.huskyrc',
+    //             // '.postcssrc.js',
+    //             // 'tslint.json',
+    //             'config/index.js'
+    //             // 'config/dev.env.js',
+    //             // 'config/prod.env.js',
+    //             // 'webpack/webpack.common.js',
+    //             // 'webpack/webpack.dev.js',
+    //             // 'webpack/webpack.prod.js',
+    //             // 'webpack/vue.utils.js',
+    //             // 'webpack/loader.conf.js',
+    //             // 'webpack/utils.js'
+    //         ]
+    //     }
+    //     // {
+    //     //     condition: generator => generator.protractorTests,
+    //     //     templates: ['tsconfig.e2e.json']
+    //     // }
+    // ]
     // image: [
     //     {
     //         path: MAIN_SRC_DIR,
@@ -101,28 +101,28 @@ const vueFiles = {
     //         ]
     //     }
     // ],
-    // vueApp: [
-    //     {
-    //         path: VUE_DIR,
-    //         templates: [
-    //             'app.vue',
-    //             'app.component.ts',
-    //             'shims-vue.d.ts',
-    //             'constants.ts',
-    //             'main.ts',
-    //             'shared/config/axios-interceptor.ts',
-    //             'shared/config/config.ts',
-    //             'shared/config/config-bootstrap-vue.ts',
-    //             'shared/config/store/account-store.ts',
-    //             'shared/config/store/alert-store.ts',
-    //             'shared/security/authority.ts',
-    //             'router/index.ts',
-    //             'router/admin.ts',
-    //             'router/entities.ts',
-    //             'router/pages.ts'
-    //         ]
-    //     }
-    // ],
+    vueApp: [
+        {
+            path: VUE_DIR,
+            templates: [
+                'app.vue',
+                'app.component.ts',
+                'shims-vue.d.ts',
+                'constants.ts',
+                'main.ts',
+                'shared/config/axios-interceptor.ts',
+                'shared/config/config.ts',
+                'shared/config/config-bootstrap-vue.ts',
+                'shared/config/store/account-store.ts',
+                'shared/config/store/alert-store.ts',
+                'shared/security/authority.ts',
+                'router/index.ts',
+                'router/admin.ts',
+                'router/entities.ts',
+                'router/pages.ts'
+            ]
+        }
+    ],
     // i18n: [
     //     {
     //         condition: generator => generator.enableTranslation,

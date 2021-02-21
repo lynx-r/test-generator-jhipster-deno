@@ -9,8 +9,8 @@ function askForClient(meta) {
 
     const choices = [
         {
-            value: 'vue',
-            name: 'Vue.js'
+            value: 'vite-vue',
+            name: 'Vitejs'
         }
     ];
 
@@ -20,7 +20,7 @@ function askForClient(meta) {
         when: () => applicationType !== 'microservice' && applicationType !== 'uaa',
         message: () => 'Which *Framework* would you like to use for the client?',
         choices,
-        default: 'vue'
+        default: 'vite-vue'
     };
 
     if (meta) return PROMPT; // eslint-disable-line consistent-return
