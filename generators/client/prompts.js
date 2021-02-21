@@ -17,7 +17,7 @@ function askForClient(meta) {
     const PROMPT = {
         type: 'list',
         name: 'clientFramework',
-        when: () => (applicationType !== 'microservice' && applicationType !== 'uaa'),
+        when: () => applicationType !== 'microservice' && applicationType !== 'uaa',
         message: () => 'Which *Framework* would you like to use for the client?',
         choices,
         default: 'vue'
@@ -27,7 +27,7 @@ function askForClient(meta) {
 
     const done = this.async();
 
-    this.prompt(PROMPT).then((prompt) => {
+    this.prompt(PROMPT).then(prompt => {
         this.clientFramework = prompt.clientFramework;
         done();
     });

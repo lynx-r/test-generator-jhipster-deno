@@ -2,8 +2,8 @@
 const chalk = require('chalk');
 const ClientGenerator = require('generator-jhipster/generators/client');
 const mainPrompts = require('generator-jhipster/generators/client/prompts');
-const writeFiles = require('./files').writeFiles;
 const prompts = require('./prompts.js');
+const writeFiles = require('./files').writeFiles;
 const blueprintPackagejs = require('../../package.json');
 
 module.exports = class extends ClientGenerator {
