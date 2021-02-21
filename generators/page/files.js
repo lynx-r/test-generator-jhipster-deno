@@ -21,7 +21,7 @@ const _ = require('lodash');
 const utils = require('../utils');
 
 /* Constants use throughout */
-const CLIENT_TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
+// const CLIENT_TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
 const MAIN_SRC_DIR = 'client/';
 // const TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
 const VUE_DIR = `${MAIN_SRC_DIR}src/`;
@@ -33,20 +33,12 @@ const vueFiles = {
             path: VUE_DIR,
             templates: [
                 {
-                    file: 'pages/page.vue',
-                    renameTo: generator => `pages/${generator.pageFolderName}/${generator.pageFolderName}.vue`
-                },
-                {
-                    file: 'pages/page.service.ts',
-                    renameTo: generator => `pages/${generator.pageFolderName}/${generator.pageFolderName}.service.ts`
-                },
-                {
-                    file: 'pages/page.component.ts',
-                    renameTo: generator => `pages/${generator.pageFolderName}/${generator.pageFolderName}.component.ts`
-                },
+                    file: 'views/Page.vue',
+                    renameTo: generator => `views/${generator.pageName}.vue`
+                }
             ]
         }
-    ],
+    ]
     // test: [
     //     {
     //         path: CLIENT_TEST_SRC_DIR,
@@ -93,14 +85,14 @@ function writeFiles() {
     this.writeFilesToDisk(vueFiles, this, false, `${CLIENT_VUE_TEMPLATES_DIR}`);
 
     // Add page paths to routing system
-    utils.addPageToRouterImport(this, this.pageName, this.pageFolderName);
-    utils.addPageToRouter(this, this.pageName, this.pageFolderName);
+    // utils.addPageToRouterImport(this, this.pageName, this.pageFolderName);
+    utils.addViewToRouter(this, this.pageName, this.pageFolderName);
     // Add page services to main
-    utils.addPageServiceToMainImport(this, this.pageName, this.pageFolderName);
-    utils.addPageServiceToMain(this, this.pageName, this.pageInstance);
+    // utils.addPageServiceToMainImport(this, this.pageName, this.pageFolderName);
+    // utils.addPageServiceToMain(this, this.pageName, this.pageInstance);
 
     // Add tests to protractor conf
-    if (this.protractorTests) {
-        utils.addPageProtractorConf(this, this.pageFolderName);
-    }
+    // if (this.protractorTests) {
+    //     utils.addPageProtractorConf(this, this.pageFolderName);
+    // }
 }

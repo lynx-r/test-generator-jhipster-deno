@@ -115,7 +115,8 @@ const vueFiles = {
                 'components/HelloWorld.vue',
                 'views/HomeView.vue',
                 'router/index.ts',
-                'router/routes.ts',
+                'router/views.ts',
+                'router/entities.ts',
                 {
                     file: 'assets/logo.png',
                     method: 'copy'

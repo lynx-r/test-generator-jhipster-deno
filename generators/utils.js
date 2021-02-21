@@ -2,7 +2,7 @@ const jhipsterUtils = require('generator-jhipster/generators/utils');
 const constants = require('generator-jhipster/generators/generator-constants');
 const chalk = require('chalk');
 
-const CLIENT_MAIN_SRC_DIR = constants.CLIENT_MAIN_SRC_DIR;
+const CLIENT_MAIN_SRC_DIR = 'client/';
 const CLIENT_WEBPACK_DIR = constants.CLIENT_WEBPACK_DIR;
 const CLIENT_TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
 
@@ -17,7 +17,7 @@ module.exports = {
     addEntityServiceToMainImport,
     addEntityServiceToMain,
     addPageToRouterImport,
-    addPageToRouter,
+    addViewToRouter,
     addPageServiceToMainImport,
     addPageServiceToMain,
     addPageProtractorConf
@@ -198,7 +198,7 @@ function addEntityToRouterImport(generator, entityAngularName, fileName, folderN
     } else {
         jhipsterUtils.rewriteFile(
             {
-                file: `${CLIENT_MAIN_SRC_DIR}/app/router/entities.ts`,
+                file: `${CLIENT_MAIN_SRC_DIR}/src/router/routes.ts`,
                 needle: 'jhipster-needle-add-entity-to-router-import',
                 splicable: [
                     generator.stripMargin(
@@ -333,19 +333,19 @@ function addPageToRouterImport(generator, pageName, pageFolderName) {
     );
 }
 
-function addPageToRouter(generator, pageName, pageFolderName) {
+function addViewToRouter(generator, pageName, pageFolderName) {
     jhipsterUtils.rewriteFile(
         {
-            file: `${CLIENT_MAIN_SRC_DIR}/app/router/pages.ts`,
-            needle: 'jhipster-needle-add-entity-to-router',
+            file: `${CLIENT_MAIN_SRC_DIR}/src/router/views.ts`,
+            needle: 'jhipster-needle-add-view-to-router',
             splicable: [
                 generator.stripMargin(
                     // prettier-ignore
                     `|
                 |    {
-                |      path: '/pages/${pageFolderName}',
+                |      path: '/views/${pageFolderName}',
                 |      name: '${pageName}',
-                |      component: ${pageName},
+                |      component: () => import('~/views/${pageName}.vue'),
                 |      meta: { authorities: [Authority.USER] }
                 |    },`
                 )
