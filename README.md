@@ -2,6 +2,13 @@
 
 An attempt to implement a jhipster blueprint with `deno` backend
 
+# The main reason to sort out with jhipster
+
+The main reason to sort out with `jhipster project` is that it has `JHipster Domain Language (JDL)` 
+witch helps to create a draft project on top of many databases and 
+technologies. You just create a project model in [JDL Studio](https://start.jhipster.tech/jdl-studio/)
+and import it in your generated project.
+
 # generator-jhipster-deno
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > JHipster blueprint, 
