@@ -1,6 +1,6 @@
 # Test project (not finished)
 
-An attempt to implement a jhipster blueprint with `deno` backend
+An attempt to implement a jhipster blueprint with `deno` backend (there is no deno at all right now. Only vite fresh template project)
 
 # The main reason to sort out with jhipster
 
