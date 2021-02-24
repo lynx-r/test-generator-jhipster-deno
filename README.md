@@ -1,3 +1,7 @@
+# Test project (not finished)
+
+An attempt to implement a jhipster blueprint with `deno` backend
+
 # generator-jhipster-deno
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > JHipster blueprint, 
