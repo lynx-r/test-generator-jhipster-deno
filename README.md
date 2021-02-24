@@ -2,9 +2,9 @@
 
 An attempt to implement a `jhipster blueprint` with `deno` backend (There is no deno at all right now. Only `vite` fresh template project)
 
-# A motivation to sort out with jhipster
+# My motivation to sort out with jhipster
 
-A motivation to sort out with `jhipster project` is that it has `JHipster Domain Language (JDL)` 
+My motivation to sort out with `jhipster project` is that it has `JHipster Domain Language (JDL)` 
 witch helps to create a draft project on top of many databases and 
 technologies. You just create a project model in [JDL Studio](https://start.jhipster.tech/jdl-studio/)
 and import it in your generated project.
