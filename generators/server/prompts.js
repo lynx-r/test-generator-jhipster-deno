@@ -61,7 +61,8 @@ function askForMainServerSideOpts(meta) {
     this.prompt(PROMPT).then(prompt => {
         this.databaseType = 'sql';
         this.devDatabaseType = 'sqlite';
-        this.prodDatabaseType = prompt.prodDatabaseType;
+        // this.prodDatabaseType = prompt.prodDatabaseType;
+        this.prodDatabaseType = 'SQL';
         this.serverPort = prompt.serverPort;
         this.authenticationType = prompt.authenticationType;
 
