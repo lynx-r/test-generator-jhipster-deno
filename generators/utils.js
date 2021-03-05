@@ -185,11 +185,11 @@ function addEntityToRouterImport(generator, entityAngularName, fileName, folderN
                     generator.stripMargin(
                         // prettier-ignore
                         `|// prettier-ignore
-                    |const ${entityAngularName} = () => import('~/entities/${folderName}/${fileName}.vue');
+                    |const ${entityAngularName} = () => import('@/entities/${folderName}/${fileName}.vue');
                     |// prettier-ignore
-                    |const ${entityAngularName}Update = () => import('~/entities/${folderName}/${fileName}-update.vue');
+                    |const ${entityAngularName}Update = () => import('@/entities/${folderName}/${fileName}-update.vue');
                     |// prettier-ignore
-                    |const ${entityAngularName}Details = () => import('~/entities/${folderName}/${fileName}-details.vue');`
+                    |const ${entityAngularName}Details = () => import('@/entities/${folderName}/${fileName}-details.vue');`
                     )
                 ]
             },
@@ -204,9 +204,9 @@ function addEntityToRouterImport(generator, entityAngularName, fileName, folderN
                     generator.stripMargin(
                         // prettier-ignore
                         `|// prettier-ignore
-                    |const ${entityAngularName} = () => import('~/entities/${folderName}/${fileName}.vue');
+                    |const ${entityAngularName} = () => import('@/entities/${folderName}/${fileName}.vue');
                     |// prettier-ignore
-                    |const ${entityAngularName}Details = () => import('~/entities/${folderName}/${fileName}-details.vue');`
+                    |const ${entityAngularName}Details = () => import('@/entities/${folderName}/${fileName}-details.vue');`
                     )
                 ]
             },
@@ -345,7 +345,7 @@ function addViewToRouter(generator, pageName, pageFolderName) {
                 |    {
                 |      path: '/views/${pageFolderName}',
                 |      name: '${pageName}',
-                |      component: () => import('~/views/${pageName}.vue'),
+                |      component: () => import('@/views/${pageName}.vue'),
                 |      meta: { authorities: [Authority.USER] }
                 |    },`
                 )
